@@ -17,16 +17,16 @@ Some early observations are missing because of source availability or required l
 |---|---|---|
 | `group` | Country or SONOMA cross-country aggregate. | Text label |
 | `quarter` | Calendar quarter. | `YYYY-QX` |
-| `rw` | External credit-condition state. | Quarterly decimal-rate units. |
-| `ew` | Expected external equity-return state. | Quarterly return units. |
-| `re` | Realized external equity-return state. | Decimal return spread. |
-| `xi` | Domestic credit-condition state. | Detrended log index. |
-| `xh` | Expected long-run productivity-growth component. | Quarterly fitted-growth units. |
-| `pchgYmG` | Real non-government output growth. | Quarterly log change. |
-| `pchgI` | Real fixed-investment growth. | Quarterly log change. |
-| `NEDY` | Net external debt relative to quarterly output; positive values denote a net external liability position before centering. | Decimal ratio. |
-| `NEEY` | Net external equity assets relative to quarterly output; positive values denote a net external asset position before centering. | Decimal ratio. |
-| `DK` | Corporate leverage, measured as nonfinancial-corporate debt relative to capital. | Decimal debt-to-capital ratio. |
+| `rw` | External credit conditions. | Interest rate in decimal format |
+| `ew` | Net external equity expected return (NEE-ER) process. | Return in decimal format |
+| `re` | Return on the net external equity position. | Return in decimal format |
+| `xi` | Domestic credit conditions. | Detrended log index |
+| `xh` | Long-run component of productivity. | Growth rate in decimal format |
+| `pchgYmG` | Real non-government output growth. | Growth rate in decimal format |
+| `pchgI` | Real investment growth. | Growth rate in decimal format |
+| `NEDY` | Net external debt-to-output ratio. | Ratio in decimal format |
+| `NEEY` | Net external equity-to-output ratio. | Ratio in decimal format |
+| `DK` | Corporate leverage, measured as nonfinancial-corporate debt relative to capital. | Ratio in decimal format |
 
 Unless noted otherwise, the distributed model variables are expressed in the same units used by the SONOMA forecasting system and are centered within each country or aggregate.
 
