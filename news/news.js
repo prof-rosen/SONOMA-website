@@ -21,47 +21,23 @@
     article.setAttribute("aria-labelledby", heading.id);
     article.append(date, heading);
 
-    if (item.dek) {
-      const dek = document.createElement("p");
-      dek.className = "intro";
-      dek.textContent = item.dek;
-      article.append(dek);
-    }
-
     const paragraphs = window.NEWS_ARTICLES?.[item.id];
     const articleParagraphs = paragraphs?.length ? paragraphs : [item.summary];
-    for (const [index, text] of articleParagraphs.entries()) {
+    for (const text of articleParagraphs) {
       const paragraph = document.createElement("p");
       paragraph.textContent = text;
       article.append(paragraph);
 
-      if (item.figure && item.figure.afterParagraph === index + 1) {
-        const figure = document.createElement("figure");
-        figure.className = "figure-card news-figure";
-        const image = document.createElement("img");
-        image.src = item.figure.src;
-        image.alt = item.figure.alt;
-        image.loading = "lazy";
-        image.decoding = "async";
-        const caption = document.createElement("figcaption");
-        caption.textContent = item.figure.caption;
-        figure.append(image, caption);
-        article.append(figure);
-      }
     }
     const links = document.createElement("div");
     links.className = "button-row";
     for (const link of item.links || []) {
       const anchor = document.createElement("a");
       anchor.className = "button";
-      if (/^\.\.?\//.test(link.url)) {
-        anchor.href = link.url;
-      } else {
-        let url;
-        try { url = new URL(link.url); } catch { continue; }
-        if (url.protocol !== "https:") continue;
-        anchor.href = url.href;
-      }
+      let url;
+      try { url = new URL(link.url); } catch { continue; }
+      if (url.protocol !== "https:") continue;
+      anchor.href = url.href;
       anchor.textContent = link.label;
       links.append(anchor);
     }

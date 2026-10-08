@@ -106,9 +106,6 @@ p { overflow-wrap: anywhere; }
 .figure-card { overflow: hidden; margin: 0; }
 .figure-card img { width: 100%; background: white; }
 .figure-card figcaption { border-top: 1px solid var(--line); padding: 15px 18px; color: var(--muted); font-size: 14px; font-weight: 700; }
-.news-figure { margin: 24px 0 8px; border-radius: 20px; box-shadow: none; }
-.news-figure img { display: block; width: 100%; height: auto; }
-.news-figure figcaption { font-weight: 500; line-height: 1.5; }
 .split { display: grid; grid-template-columns: 0.94fr 1.06fr; gap: 22px; align-items: start; }
 .callout { padding: 26px; background: linear-gradient(135deg, #ffffff, #f7fbff); }
 .callout p { color: var(--muted); }
